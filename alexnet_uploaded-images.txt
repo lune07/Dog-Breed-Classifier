@@ -1,0 +1,84 @@
+Argument 1: uploaded_images/
+Argument 1: alexnet
+Argument 1: dognames.txt
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = alexnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 5 key-value pairs.
+Below are 5 of them:
+ 1 key:                       tree.jpg  label:                       tree
+ 2 key: Afghan-Hound-standing-in-a-garden.jpg  label: afghanhoundstandinginagarden
+ 3 key:          Alaskan Malamute2.jpg  label:           alaskan malamute
+ 4 key:                       wolf.jpg  label:                       wolf
+ 5 key:           Alaskan Malamute.jpg  label:           alaskan malamute
+{'tree.jpg': ['tree', 'stone wall', 0], 'Afghan-Hound-standing-in-a-garden.jpg': ['afghanhoundstandinginagarden', 'afghan hound, afghan', 0], 'Alaskan Malamute2.jpg': ['alaskan malamute', 'malamute, malemute, alaskan malamute', 1], 'wolf.jpg': ['wolf', 'timber wolf, grey wolf, gray wolf, canis lupus', 1], 'Alaskan Malamute.jpg': ['alaskan malamute', 'malamute, malemute, alaskan malamute', 1]}
+
+     MATCH:
+
+         Alaskan Malamute2.jpg: 
+Real:           alaskan malamute   Classifier: malamute, malemute, alaskan malamute
+
+                      wolf.jpg: 
+Real:                       wolf   Classifier: timber wolf, grey wolf, gray wolf, canis lupus
+
+          Alaskan Malamute.jpg: 
+Real:           alaskan malamute   Classifier: malamute, malemute, alaskan malamute
+
+ NOT A MATCH:
+
+                      tree.jpg: 
+Real:                       tree   Classifier:                     stone wall
+
+Afghan-Hound-standing-in-a-garden.jpg: 
+Real: afghanhoundstandinginagarden   Classifier:           afghan hound, afghan
+
+# Total Images 5 # Matches: 3 # NOT Matches: 2
+
+     MATCH:
+
+         Alaskan Malamute2.jpg: 
+Real:           alaskan malamute   Classifier: malamute, malemute, alaskan malamute  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                      wolf.jpg: 
+Real:                       wolf   Classifier: timber wolf, grey wolf, gray wolf, canis lupus  
+PetLabelDog: 0  ClassLabelDog: 0
+
+          Alaskan Malamute.jpg: 
+Real:           alaskan malamute   Classifier: malamute, malemute, alaskan malamute  
+PetLabelDog: 1  ClassLabelDog: 1
+
+ NOT A MATCH:
+
+                      tree.jpg: 
+Real:                       tree   Classifier:                     stone wall  
+PetLabelDog: 0  ClassLabelDog: 0
+
+Afghan-Hound-standing-in-a-garden.jpg: 
+Real: afghanhoundstandinginagarden   Classifier:           afghan hound, afghan  
+PetLabelDog: 0  ClassLabelDog: 1
+
+# Total Images 5 # Matches: 3 # NOT Matches: 2
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  5  N Dog Images:  2  N NotDog Images:  3 
+Pct Corr dog: 100.0 Pct Corr NOTdog:  66.7  Pct Corr Breed: 100.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  5  N Dog Images:  2  N NotDog Images:  3 
+Pct Corr dog: 100.0 Pct Corr NOTdog:  66.7  Pct Corr Breed: 100.0
+alexnet is used as the MODEL
+5 Are the number of images
+2 Are the number of dog images
+3 Are the number of not-a-dog images
+
+Incorrectly Classified Dogs:
+Pet Label: wolf, Classifier Label: timber wolf, grey wolf, gray wolf, canis lupus
+
+Incorrectly Classified Dog Breeds:
+Pet Label: alaskan malamute, Classifier Label: malamute, malemute, alaskan malamute
+Pet Label: alaskan malamute, Classifier Label: malamute, malemute, alaskan malamute
+
+** Total Elapsed Runtime: 0:0:1
